@@ -199,6 +199,9 @@ typedef NS_ENUM(NSInteger, TOCropViewControllerAspectRatio) {
     self.toolbar.frame = [self frameForToolBarWithVerticalLayout:verticalLayout];
     [self.toolbar setNeedsLayout];
     [UIView setAnimationsEnabled:YES];
+    
+    //Just for now-> when user splits the changes done so far gets lost.
+    [self.cropView resetLayoutToDefaultAnimated:NO];
 }
 
 #pragma mark - Rotation Handling -

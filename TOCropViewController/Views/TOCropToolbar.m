@@ -120,7 +120,7 @@
 {
     [super layoutSubviews];
     
-    BOOL verticalLayout = FALSE;
+    BOOL verticalLayout = (CGRectGetWidth(self.bounds) < CGRectGetHeight(self.bounds));
     CGSize boundsSize = self.bounds.size;
     
     self.cancelIconButton.hidden = (!verticalLayout);
